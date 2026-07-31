@@ -191,3 +191,9 @@ document.getElementById('squirreling-btn').addEventListener('click', function(e)
         alert("Incorrect password!");
     }
 });
+
+const emailGrid = document.getElementById('all-emails');
+
+if (emailGrid) {
+    renderEmails(emailsData); 
+}
