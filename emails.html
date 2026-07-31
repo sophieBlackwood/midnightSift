@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emails | Midnight Sift</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png?v=2"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+                <a href="index.html">Midnight <span>Sift</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="emails.html" class="active">Emails</a></li>
+                <li><a href="#" id="squirreling-btn">Squirreling </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br><br><br>
+
+    <div class="search-wrapper">
+        <input type="text" id="search-emails" class="search" placeholder="Search emails...">
+        
+        <div class="filter-bar">
+            <button class="filter-btn active" data-sort="newest">Newest</button>
+            <button class="filter-btn" data-sort="oldest">Oldest</button>
+            <button class="filter-btn" data-sort="az">A-Z</button>
+            <button class="filter-btn" data-sort="za">Z-A</button>
+        </div>
+    </div>
+
+    <main class="container">
+        <div id="all-emails" class="grid"></div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
