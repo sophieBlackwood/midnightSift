@@ -178,3 +178,16 @@ document.addEventListener("DOMContentLoaded", () => {
         render();
     }
 });
+
+document.getElementById('squirreling-btn').addEventListener('click', function(e) {
+    e.preventDefault(); 
+
+    const correctPassword = "brooklyn"; 
+    const userInput = prompt("Enter password to access Squirreling:");
+
+    if (userInput === correctPassword) {
+        window.location.href = "squirreling.html";
+    } else if (userInput !== null) {
+        alert("Incorrect password!");
+    }
+});
