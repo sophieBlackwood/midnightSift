@@ -195,5 +195,15 @@ document.getElementById('squirreling-btn').addEventListener('click', function(e)
 const emailGrid = document.getElementById('all-emails');
 
 if (emailGrid) {
-    renderEmails(emailsData); 
+    emailsData.forEach(email => {
+        const card = document.createElement('div');
+        card.classList.add('card'); 
+        card.innerHTML = `
+            <h3>${email.title}</h3>
+            <span class="date">${email.date}</span>
+            <p>${email.preview}</p>
+        `;
+        
+        emailGrid.appendChild(card);
+    });
 }
