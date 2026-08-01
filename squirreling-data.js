@@ -1,5 +1,5 @@
 const emailsData = [
-    { title: "Hi, I'm Ricky", date: "2026-06-06", content: "
+    { id: 1, title: "Hi, I'm Ricky", date: "2026-06-06", content: "
         Brooklyn: Hey Dallin,
 I don't know the correct procedure to email missionaries and who knows if/when you'll actually get this but I wanted to reach out. I waited until I was in a better mood so hopefully this email will bring you some joy.
 
@@ -34,13 +34,13 @@ The Goddess of Dandelions
     
 
 You probably won't see this but as part of FSY next week I will get to go to the MTC to watch the Tuesday Devo. So that will be fun and maybe I'll see you (but honestly probably not lol but the idea is fun)" },
-    { title: "Second Email", date: "2026-01-08", content: "Full content..." },
-    { title: "Third Email", date: "2026-01-15", content: "Full content..." },
-    { title: "Fourth Email", date: "2026-01-22", content: "Full content..." },
-    { title: "Fifth Email", date: "2026-01-29", content: "Full content..." },
-    { title: "Sixth Email", date: "2026-02-05", content: "Full content..." },
-    { title: "Seventh Email", date: "2026-02-12", content: "Full content..." },
-    { title: "Eighth Email", date: "2026-02-19", content: "Full content..." },
-    { title: "Ninth Email", date: "2026-02-26", content: "Full content..." },
-    { title: "Tenth Email", date: "2026-03-05", content: "Full content..." }
+    { id: 2, title: "Second Email", date: "2026-01-08", content: "Full content..." },
+    { id: 3, title: "Third Email", date: "2026-01-15", content: "Full content..." },
+    { id: 4, title: "Fourth Email", date: "2026-01-22", content: "Full content..." },
+    { id: 5, title: "Fifth Email", date: "2026-01-29", content: "Full content..." },
+    { id: 6, title: "Sixth Email", date: "2026-02-05", content: "Full content..." },
+    { id: 7, title: "Seventh Email", date: "2026-02-12", content: "Full content..." },
+    { id: 8, title: "Eighth Email", date: "2026-02-19", content: "Full content..." },
+    { id: 9, title: "Ninth Email", date: "2026-02-26", content: "Full content..." },
+    { id: 10, title: "Tenth Email", date: "2026-03-05", content: "Full content..." }
 ];
