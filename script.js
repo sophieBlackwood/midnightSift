@@ -159,13 +159,17 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentSort = 'newest';
         
         const render = () => {
-            const query = searchInput ? searchInput.value.toLowerCase() : "";
+            const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
             
-            let list = targetData.filter(item => 
-                (item.title && item.title.toLowerCase().includes(query)) || 
-                (item.tags && item.tags.some(t => t.toLowerCase().includes(query))) ||
-                (item.preview && item.preview.toLowerCase().includes(query))
-            );
+            // SAFE FILTERING (Prevents crash if preview/tags are missing)
+            let list = targetData.filter(item => {
+                const titleMatch = item.title && item.title.toLowerCase().includes(query);
+                const tagMatch = item.tags && item.tags.some(t => t.toLowerCase().includes(query));
+                const textSnippet = item.preview || item.content || "";
+                const textMatch = textSnippet.toLowerCase().includes(query);
+
+                return titleMatch || tagMatch || textMatch;
+            });
 
             if (currentSort === 'newest') {
                 list.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -201,17 +205,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 7. PASSWORD LOCK LOGIC
+    const correctPassword = "brooklyn"; 
+
+    // Handle Direct Page Loads to squirreling.html
+    if (squirrelingGrid && sessionStorage.getItem('squirreling_unlocked') !== 'true') {
+        const userInput = prompt("Enter password to access Squirreling:");
+        if (userInput === correctPassword) {
+            sessionStorage.setItem('squirreling_unlocked', 'true');
+        } else {
+            alert("Incorrect password!");
+            window.location.href = "index.html";
+        }
+    }
+
+    // Handle Nav Bar Button Click
     if (squirrelingBtn) {
         squirrelingBtn.addEventListener('click', function(e) {
             e.preventDefault(); 
 
-            const correctPassword = "brooklyn"; 
-            const userInput = prompt("Enter password to access Squirreling:");
-
-            if (userInput === correctPassword) {
+            if (sessionStorage.getItem('squirreling_unlocked') === 'true') {
                 window.location.href = "squirreling.html";
-            } else if (userInput !== null) {
-                alert("Incorrect password!");
+            } else {
+                const userInput = prompt("Enter password to access Squirreling:");
+                if (userInput === correctPassword) {
+                    sessionStorage.setItem('squirreling_unlocked', 'true');
+                    window.location.href = "squirreling.html";
+                } else if (userInput !== null) {
+                    alert("Incorrect password!");
+                }
             }
         });
     }
