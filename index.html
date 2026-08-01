@@ -6,24 +6,24 @@
     <title>Midnight Sift</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="logo.png?v=2"/>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png?v=2"/>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-    <div class="logo-icon">
-        <span class="line-1"></span>
-        <span class="line-2"></span>
-        <span class="line-3"></span>
-    </div>
-    <a href="index.html">Midnight <span>Sift</span></a>
-</div>
+                <div class="logo-icon">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+                <a href="index.html">Midnight <span>Sift</span></a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="archive.html">Archive</a></li>
-                <li><a href="emails.html">Missionary Emails</a></li>
-                <li><a href="#" id="squirreling-btn">Squirreling</a></li>
+                <li><a href="emails.html">Emails</a></li>
+                <li><a href="#" id="squirreling-btn">Squirreling 🔒</a></li>
             </ul>
         </nav>
     </header>
@@ -36,38 +36,34 @@
         </div>
     </section>
 
-   <section class="section blog-section">
-  <div class="container-card">
-    <h3>Featured Poems</h3>
-    <div class="blog-carousel">
-      <button class="blog-carousel-btn prev" id="prev-btn" aria-label="Previous poem">&#10094;</button>
-      
-      <div class="blog-carousel-track-container">
-        <div id="featured-list" class="blog-card-grid"></div>
-      </div>
-      
-      <button class="blog-carousel-btn next" id="next-btn" aria-label="Next poem">&#10095;</button>
-    </div>
-  </div>
-</section>
-
-        <section class="about-author-section">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="profile.jpeg" alt="Dallin Stahmann">
+    <section class="section blog-section">
+        <div class="container-card">
+            <h3>Featured Poems</h3>
+            <div class="blog-carousel">
+                <button class="blog-carousel-btn prev" id="prev-btn" aria-label="Previous poem">&#10094;</button>
+                <div class="blog-carousel-track-container">
+                    <div id="featured-list" class="blog-card-grid"></div>
                 </div>
-                <div class="about-text">
-                    <span class="section-label">The Author</span>
-                    <p id="author-blurb">Dallin began writing poems a few years ago as a way of understanding the world. Since then, he has learned and grown and discovered a gift for words and for expressing difficult emotions through poems. This website serves as his way of sharing these poems with others who may benefit from them.</p>
-                </div>
+                <button class="blog-carousel-btn next" id="next-btn" aria-label="Next poem">&#10095;</button>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="about-author-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="assets/hero_images/profile.jpeg" alt="Dallin Stahmann">
+            </div>
+            <div class="about-text">
+                <span class="section-label">The Author</span>
+                <p id="author-blurb">Dallin began writing poems a few years ago as a way of understanding the world. Since then, he has learned and grown and discovered a gift for words and for expressing difficult emotions through poems. This website serves as his way of sharing these poems with others who may benefit from them.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         MIDNIGHT SIFT &copy; 2026
     </footer>
-
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
