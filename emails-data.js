@@ -3,7 +3,7 @@
      id: 1,
      title: "Arriving at the MTC", 
      date: "6/5/2026", 
-     content: "Where do I begin? There's so many little things I can share and recap and overall things have been great. I'm not the best at organizing my thoughts but I'll give it a try and see how it turns out
+     content: 'Where do I begin? There's so many little things I can share and recap and overall things have been great. I'm not the best at organizing my thoughts but I'll give it a try and see how it turns out
 
 Home MTC: 🏡
 This was honestly hard at times while I felt and had so much love and support things were different but still in the same place as I was before with constant reminders of old habits and distractions that made free time the hardest part of the day most nights.
@@ -48,14 +48,14 @@ On the bus to the temple one of the Sisters said she only found the roght bus be
 
 So many other things I can say but for now I'll end there. Love you all and thank you so much for the emails and support. Until next time
 
--Elder Stahmann" },
+-Elder Stahmann'},
 
      
     { 
      id: 2,
       title: "Failed prison break at the max security MTC 🔒", 
       date: "6/12/2026", 
-      content: "First full week at the MTC!!!
+      content: 'First full week at the MTC!!!
 
 First off in case I missed anyone last week, here is the link to view the photos I have (there's a healthy amount and I add some everyday so check as often as you like).
 
@@ -130,14 +130,14 @@ Priesthood blessing = special prayer for comfort, strength, and/ or healing with
 
 Well hope you all are doing well, i love to hear from you all and i hope you enjoy this email (sorry if its too long I know if you want you will, but no hard feelings if you are busy or dont want to read this much about someone else's life). Stay strong and know the lord will guide you in your life and offers us guidance 
 
--Elder Stahmann" },
+-Elder Stahmann' },
 
  
     { 
      id:3,
       title: "Successful escape from the MTC (the longest email ever)", 
       date: "6/22/2026", 
-      content: "Starting with photos 📷 because i know some of you just want those (btw ive gone back and added more so give them a second glace and most have captions for context or some bad humor so look for that as well)
+      content: 'Starting with photos 📷 because i know some of you just want those (btw ive gone back and added more so give them a second glace and most have captions for context or some bad humor so look for that as well)
 
 
 OK so buckle up this one is going to be a LONG email for a lot of reasons. If i counted right it will be about 38 paragraphs 😅🫣. Despite the fact i draft my emails ahead of time I missed some stuff last week that I want to include now. 😅 (crazy I know considering the length) also since I draft it through the week, the past and present tense of the email may switch throughout. It will also be really long due to the end of MTC being pretty packed full of things and same with the start of the mission. (Plus its going over 11 days not 7 days of the mission since p-day got moved) Don't worry in the future these won't be nearly as long, but i hope you all enjoy what likely will be my longest email of the mission or that you ever see.
@@ -246,14 +246,14 @@ Blessing of the week!
 
 Never forget you are loved and that God is aware of you and will help you. Love you all and thank you all again for everything
 Sincerely
--Elder Stahmann" },
+-Elder Stahmann' },
 
      
     { 
      id:4,
      title: "Stopping to eat the roses 😋🌹", 
       date: "6/29/2026", 
-      content: "Hello everyone (all 100 of you)! Turns out this phone hid some emails from me and I spent an extra hour and a half digging through and checking my emails and everything, but hopefully this should be everyone's email that I had. If you know anyone who wants to be added let me know, or if you dont want to receive these let me know and ill take you off the email list. Additionally if you didnt get my last few emails and want them let me know and I will forward them to you so you can enjoy my rambling 😁. There was about 15 people i was accidentally missing before due to me being bad at tech, so if this is your first email you are getting then hi glad you can be joing menon this journey, and hopefully it won't take me 2 hours to add all the emails anymore 😅. 
+      content: 'Hello everyone (all 100 of you)! Turns out this phone hid some emails from me and I spent an extra hour and a half digging through and checking my emails and everything, but hopefully this should be everyone's email that I had. If you know anyone who wants to be added let me know, or if you dont want to receive these let me know and ill take you off the email list. Additionally if you didnt get my last few emails and want them let me know and I will forward them to you so you can enjoy my rambling 😁. There was about 15 people i was accidentally missing before due to me being bad at tech, so if this is your first email you are getting then hi glad you can be joing menon this journey, and hopefully it won't take me 2 hours to add all the emails anymore 😅. 
 
 
 Also for anyone curious what the title of this weeks email means... its pretty literal 😅. Turns out roses are edible. Source Elder Larsen and whoever told him. Like i knew there was rose petals stuff but never realized it was literally roses. As we walk neighborhoods to knock if there are roses past the fence they are technically not private property and we sometimes grab a petal and see how good they are. Elder Larsen keeps saying they taste like apple skins, and i kind of get it but not quite. Also for anyone curious on my thoughts and the different colors there was a difference. 1st one I had was white and it was bitter. 2nd was light pink and that one was kind of tart. And the yellow rose petal was surprisingly sweet. I might be crazy especially since its just flowers and colors but I swear its true they all tasted different. 🌹💐😋😅 not the best snack by any means (probably burn more calories to digest them than a petal gives), but what else are bored Elders supposed to do when they go knocking?
@@ -342,13 +342,13 @@ So like the other things I just listed I also have a note page on my phone of al
 
 Thank you all again for checking in and taking some of your precious time to read this (or skim this) hope you're all doing great, and know you are all in my prayers 🙏. 
 
--Elder Stahmann" },
+-Elder Stahmann'},
      
     { 
      id:5,
      title: "Let freedom clean 🇺🇸😷🧽🧼🧹", 
       date: "7/6/2026", 
-      content: "Welcome back to another email from that one Elder you keep hearing from 😄.
+      content: 'Welcome back to another email from that one Elder you keep hearing from 😄.
 
 
 Monday 🔫🔫🔫🔫🔫🔫🔫 
@@ -431,14 +431,14 @@ To all the other missionaries and future missionaries I know. Im sure you have a
 
 Once again thanks for tuning in and being here on this journey with me. You're all incredible 
 
--Elder Stahmann" },
+-Elder Stahmann' },
 
      
     { 
      id:6,
      title: "Missionary delivery service 📨📮", 
       date: "7/13/2026", 
-      content: "Sorry if I'm missing anyone, or if you get a duplicate of this or any future emails. Since I send emails to so many people I have to split this into multiple emails with the same content to prevent it from going into spam folders, so hopefully you are all still getting these and sorry for any inconvenience it may cause as I continue to figure out the best way to do these.
+      content: 'Sorry if I'm missing anyone, or if you get a duplicate of this or any future emails. Since I send emails to so many people I have to split this into multiple emails with the same content to prevent it from going into spam folders, so hopefully you are all still getting these and sorry for any inconvenience it may cause as I continue to figure out the best way to do these.
 
 
 This week was honestly all over the place from weird, slow and tiring, to positive, nice and encouraging. Feel free to skim around and read however much or little that you like, just thanks for being here. Also as always please forgive or ignore my bad grammar, spelling, typos and run on sentences. Thanks 😅
@@ -500,14 +500,14 @@ Grateful for this week
 Free food and member meals 😋 
 
 Know you are all in my thoughts and prayers and you are all the best
--Elder Stahmann" },
+-Elder Stahmann' },
 
      
     { 
      id:7,
      title: "⚠️Disclaimer!!! I am not 14, and I dont sell cigarettes 🚬", 
       date: "6/5/2026", 
-      content: "So lets explain the title of the email real quick 😅. When we were teaching Diego (the new member who hasn't been going to church) he asked me and my companion if we were 14 year olds. (I dont blame him look at me 🤣). Elder Larsen jokingly responded saying "no we are 15". Turns out Diego didnt realize we were joking and believed it. It wasn't until I mentioned something at college he looks shocked and asks me how do I have college experience if im 15 🤯. We then realized he actually took that seriously and we then blew his mind again by sharing that we are both 19 and I am actually older than Elder Larsen despite me being the newer missionary.
+      content: 'So lets explain the title of the email real quick 😅. When we were teaching Diego (the new member who hasn't been going to church) he asked me and my companion if we were 14 year olds. (I dont blame him look at me 🤣). Elder Larsen jokingly responded saying "no we are 15". Turns out Diego didnt realize we were joking and believed it. It wasn't until I mentioned something at college he looks shocked and asks me how do I have college experience if im 15 🤯. We then realized he actually took that seriously and we then blew his mind again by sharing that we are both 19 and I am actually older than Elder Larsen despite me being the newer missionary.
 
 For the cigarettes part... when we were out finding someone came to to me holding a $5 bill and asked if he could buy a smoke off of me. I just kind of started out of confusion as he proceeded to ask me again. He quickly realized I didnt have what he wanted and didnt say another word as he walked away, but that was definitely strange. I was not expecting to get asked if I would sell someone cigarettes on my mission 😅.
 
@@ -586,14 +586,14 @@ Elder Burger inviting us to celebrate his birthday with him (he didnt tell most 
 Also for those that made it to the end here's some bonus info (which i cant recall of i shared or not yet 😅). Next week ill be going to the temple, so i won't be sending out an email or anything until Thursday next week, so if you reach out or dont see an email next week dont worry i should be fine and ill be back to bother you all with more emails, photos, and stories shortly 😁.
 
 Signing off for now
--Elder Stahmann" },
+-Elder Stahmann' },
 
      
     { 
      id:8,
      title: "Bloody biking 🚴‍♀️🩸", 
       date: "7/30/2026", 
-      content: "So I thought writing about Monday last week would allow me to skip it and shorten this email a bit, but something happened at the end that was worth sharing, so lets just jump right into it and not extend this email anymore than I already have 😅.
+      content: 'So I thought writing about Monday last week would allow me to skip it and shorten this email a bit, but something happened at the end that was worth sharing, so lets just jump right into it and not extend this email anymore than I already have 😅.
 
 Monday 🚴‍♀️🩸🤕
 As we were biking to our member meal about 5 minutes after leaving the church building we crashed... we both are OK and its nothing crazy, but we were going through the park by the church building on the way to the members house which is normally out of our area, but since Elder Larsen is DL he said it was OK and he approved it. Well as we went through the park this couple was blocking the sidewalk so we had to go into the grass which was damp from a slight sprinkling of water earlier. 
@@ -679,10 +679,8 @@ I share this out of love for you all not out of criticism. Remember to be cautio
 Sincerely
 -Elder Stahmann
 
-P.S. Thank you again to everyone that writes and supports me you all mean the world to me. Stay safe wherever you are. Feel free to share anything you feel like with me."
+P.S. Thank you again to everyone that writes and supports me you all mean the world to me. Stay safe wherever you are. Feel free to share anything you feel like with me.'
 },
-
-     
-    { title: "Template", date: "1/1/2026", content: "..." }
+    { title: "Template", date: "1/1/2026", content: '...' },
 
 ];
