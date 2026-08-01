@@ -1,4 +1,4 @@
-const emailsData = [
+const squirrelingData = [
     { id: 1, title: "Hi, I'm Ricky", date: "2026-06-06", content: "
         Brooklyn: Hey Dallin,
 I don't know the correct procedure to email missionaries and who knows if/when you'll actually get this but I wanted to reach out. I waited until I was in a better mood so hopefully this email will bring you some joy.
