@@ -1,4 +1,4 @@
-const emailsData = [
+ const emailsData = [
     { title: "Arriving at the MTC", date: "6/5/2026", content: "Where do I begin? There's so many little things I can share and recap and overall things have been great. I'm not the best at organizing my thoughts but I'll give it a try and see how it turns out
 
 Home MTC: 🏡
@@ -46,7 +46,7 @@ So many other things I can say but for now I'll end there. Love you all and than
 
 -Elder Stahmann" }
 
-    const emailsData = [
+     
     { title: "Failed prison break at the max security MTC 🔒", date: "6/12/2026", content: "First full week at the MTC!!!
 
 First off in case I missed anyone last week, here is the link to view the photos I have (there's a healthy amount and I add some everyday so check as often as you like).
@@ -126,7 +126,7 @@ Well hope you all are doing well, i love to hear from you all and i hope you enj
 
 -Elder Stahmann" }
 
-const emailsData = [
+ 
     { title: "Successful escape from the MTC (the longest email ever)", date: "6/22/2026", content: "Starting with photos 📷 because i know some of you just want those (btw ive gone back and added more so give them a second glace and most have captions for context or some bad humor so look for that as well)
 https://photos.app.goo.gl/cyZZ9c5xEZWnzm8t7
 
@@ -239,7 +239,7 @@ Never forget you are loved and that God is aware of you and will help you. Love 
 Sincerely
 -Elder Stahmann " }
 
-    const emailsData = [
+     
     { title: "Stopping to eat the roses 😋🌹", date: "6/29/2026", content: "Hello everyone (all 100 of you)! Turns out this phone hid some emails from me and I spent an extra hour and a half digging through and checking my emails and everything, but hopefully this should be everyone's email that I had. If you know anyone who wants to be added let me know, or if you dont want to receive these let me know and ill take you off the email list. Additionally if you didnt get my last few emails and want them let me know and I will forward them to you so you can enjoy my rambling 😁. There was about 15 people i was accidentally missing before due to me being bad at tech, so if this is your first email you are getting then hi glad you can be joing menon this journey, and hopefully it won't take me 2 hours to add all the emails anymore 😅. 
 
 Photos 📸!!!
@@ -335,7 +335,7 @@ Thank you all again for checking in and taking some of your precious time to rea
 " }
 
 
-    const emailsData = [
+     
     { title: "Let freedom clean 🇺🇸😷🧽🧼🧹", date: "7/6/2026", content: "Welcome back to another email from that one Elder you keep hearing from 😄.
 
 Once again photos link for those that want/ need it 📷 https://photos.app.goo.gl/cyZZ9c5xEZWnzm8t7
@@ -422,7 +422,7 @@ Once again thanks for tuning in and being here on this journey with me. You're a
 
 -Elder Stahmann" }
 
-    const emailsData = [
+     
     { title: "Missionary delivery service 📨📮", date: "7/13/2026", content: "Sorry if I'm missing anyone, or if you get a duplicate of this or any future emails. Since I send emails to so many people I have to split this into multiple emails with the same content to prevent it from going into spam folders, so hopefully you are all still getting these and sorry for any inconvenience it may cause as I continue to figure out the best way to do these.
 
 Photos 📸 
@@ -489,7 +489,7 @@ Free food and member meals 😋
 Know you are all in my thoughts and prayers and you are all the best
 -Elder Stahmann" }
 
-    const emailsData = [
+     
     { title: "⚠️Disclaimer!!! I am not 14, and I dont sell cigarettes 🚬", date: "6/5/2026", content: "So lets explain the title of the email real quick 😅. When we were teaching Diego (the new member who hasn't been going to church) he asked me and my companion if we were 14 year olds. (I dont blame him look at me 🤣). Elder Larsen jokingly responded saying "no we are 15". Turns out Diego didnt realize we were joking and believed it. It wasn't until I mentioned something at college he looks shocked and asks me how do I have college experience if im 15 🤯. We then realized he actually took that seriously and we then blew his mind again by sharing that we are both 19 and I am actually older than Elder Larsen despite me being the newer missionary.
 
 For the cigarettes part... when we were out finding someone came to to me holding a $5 bill and asked if he could buy a smoke off of me. I just kind of started out of confusion as he proceeded to ask me again. He quickly realized I didnt have what he wanted and didnt say another word as he walked away, but that was definitely strange. I was not expecting to get asked if I would sell someone cigarettes on my mission 😅.
@@ -571,7 +571,7 @@ Also for those that made it to the end here's some bonus info (which i cant reca
 Signing off for now
 -Elder Stahmann" }
 
-    const emailsData = [
+     
     { title: "Bloody biking 🚴‍♀️🩸", date: "7/30/2026", content: "So I thought writing about Monday last week would allow me to skip it and shorten this email a bit, but something happened at the end that was worth sharing, so lets just jump right into it and not extend this email anymore than I already have 😅.
 
 Monday 🚴‍♀️🩸🤕
@@ -663,7 +663,7 @@ P.S. Thank you again to everyone that writes and supports me you all mean the wo
 Also photos link for those that are interested or still need it 📷
 https://photos.app.goo.gl/cyZZ9c5xEZWnzm8t7" }
 
-    const emailsData = [
+     
     { title: "Template", date: "1/1/2026", content: "..." }
 
 
