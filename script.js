@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const poemHero = document.querySelector('.poem-hero-visual');
     const squirrelingBtn = document.getElementById('squirreling-btn');
 
-    // 2. BACKGROUND HERO LOGIC (FIXED)
+    // 2. BACKGROUND HERO LOGIC
     const poemImages = [
         'hero2.jpg', 'hero3.jpg', 'hero4.jpg', 'hero5.jpg', 'hero6.jpg',
         'hero7.jpg', 'hero8.jpg', 'hero9.jpg', 'hero10.jpg', 'hero11.jpg',
@@ -18,24 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
         'hero17.jpg', 'hero18.jpg', 'hero19.jpg'
     ];
 
-    // Helper to ensure paths resolve reliably relative to root
-    const getImagePath = (fileName) => {
-        // Adjust path format if hosting on subfolders/GitHub Pages
-        return `assets/hero_images/${fileName}`;
-    };
+    const getImagePath = (fileName) => `assets/hero_images/${fileName}`;
 
     if (mainHero) {
-        const imagePath = getImagePath('hero.jpg');
-        mainHero.style.backgroundImage = `url('${imagePath}')`;
+        mainHero.style.backgroundImage = `url('${getImagePath('hero.jpg')}')`;
         mainHero.style.backgroundSize = 'cover';
         mainHero.style.backgroundPosition = 'center';
     } 
     
-    // Changed 'else if' to 'if' so poemHero gets updated even if mainHero exists
     if (poemHero) {
         const randomImg = poemImages[Math.floor(Math.random() * poemImages.length)];
-        const imagePath = getImagePath(randomImg);
-        poemHero.style.backgroundImage = `url('${imagePath}')`;
+        poemHero.style.backgroundImage = `url('${getImagePath(randomImg)}')`;
         poemHero.style.backgroundSize = 'cover';
         poemHero.style.backgroundPosition = 'center';
     }
@@ -48,10 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         el.innerHTML = `
             <div class="blog-card-inner">
-                <span class="date" style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">${p.date}</span>
-                <h4>${p.title}</h4>
+                <span class="date" style="color: var(--accent, #8b5cf6); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">${p.date || ''}</span>
+                <h4>${p.title || 'Untitled'}</h4>
                 <p>${displayText}</p>
-                <a href="./poem.html?id=${p.id}" class="link" style="margin-top: 1rem; display: block; color: var(--accent);">Read more →</a>
+                <a href="./poem.html?id=${p.id}" class="link" style="margin-top: 1rem; display: block; color: var(--accent, #8b5cf6);">Read more →</a>
             </div>
         `;
         
@@ -63,14 +56,48 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement('div');
         card.classList.add('card'); 
         card.innerHTML = `
-            <span class="date" style="color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">${item.date}</span>
-            <h2>${item.title}</h2>
+            <span class="date" style="color: var(--accent, #8b5cf6); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">${item.date || ''}</span>
+            <h2>${item.title || 'Untitled'}</h2>
             <p>${item.preview || (item.content ? item.content.substring(0, 120) + "..." : "")}</p>
         `;
         return card;
     }
 
-    // 4. CAROUSEL INITIALIZATION LOGIC
+    // 4. PASSWORD LOCK LOGIC (FIXED)
+    const correctPassword = "brooklyn"; 
+
+    if (squirrelingGrid) {
+        if (sessionStorage.getItem('squirreling_unlocked') !== 'true') {
+            const userInput = prompt("Enter password to access Squirreling:");
+            if (userInput === correctPassword) {
+                sessionStorage.setItem('squirreling_unlocked', 'true');
+            } else {
+                alert("Incorrect password!");
+                window.location.href = "index.html";
+                return; // Stop running remaining scripts if access denied
+            }
+        }
+    }
+
+    if (squirrelingBtn) {
+        squirrelingBtn.addEventListener('click', function(e) {
+            e.preventDefault(); 
+
+            if (sessionStorage.getItem('squirreling_unlocked') === 'true') {
+                window.location.href = "squirreling.html";
+            } else {
+                const userInput = prompt("Enter password to access Squirreling:");
+                if (userInput === correctPassword) {
+                    sessionStorage.setItem('squirreling_unlocked', 'true');
+                    window.location.href = "squirreling.html";
+                } else if (userInput !== null) {
+                    alert("Incorrect password!");
+                }
+            }
+        });
+    }
+
+    // 5. CAROUSEL INITIALIZATION
     function initCarousel() {
         const blogTrack = document.querySelector(".blog-card-grid");
         const blogPrev = document.querySelector(".blog-carousel-btn.prev");
@@ -140,18 +167,10 @@ document.addEventListener("DOMContentLoaded", () => {
             blogPrev?.addEventListener("click", prev);
 
             updateCarousel(false); 
-
-            let resizeTimeout;
-            window.addEventListener("resize", () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {
-                    updateCarousel(false); 
-                }, 150); 
-            });
         }
     }
 
-    // 5. HOME PAGE
+    // 6. HOME PAGE FEATURED
     if (featuredList && typeof poems !== 'undefined') {
         featuredList.innerHTML = "";
         poems.filter(p => p.featured).forEach(p => featuredList.appendChild(createPoemCard(p)));
@@ -162,21 +181,16 @@ document.addEventListener("DOMContentLoaded", () => {
         authorBlurb.textContent = author.blurb;
     }
 
-    // 6. MULTI-PAGE GRID RENDERER (Archive / Emails / Squirreling)
-    const targetContainer = allEl || emailGrid || squirrelingGrid;
-    let targetData = null;
+    // 7. MULTI-PAGE GRID RENDERER (FIXED TARGET RESOLUTION)
+    const renderSection = (container, data, isPoem = false) => {
+        if (!container || !data) return;
 
-    if (allEl && typeof poems !== 'undefined') targetData = poems;
-    else if (emailGrid && typeof emailsData !== 'undefined') targetData = emailsData;
-    else if (squirrelingGrid && typeof squirrelingData !== 'undefined') targetData = squirrelingData;
-
-    if (targetContainer && targetData) {
         let currentSort = 'newest';
-        
+
         const render = () => {
             const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
             
-            let list = targetData.filter(item => {
+            let list = data.filter(item => {
                 const titleMatch = item.title && item.title.toLowerCase().includes(query);
                 const tagMatch = item.tags && item.tags.some(t => t.toLowerCase().includes(query));
                 const textSnippet = item.preview || item.content || "";
@@ -190,15 +204,15 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (currentSort === 'oldest') {
                 list.sort((a, b) => new Date(a.date).getTime() - new Date(a.date).getTime());
             } else if (currentSort === 'az') {
-                list.sort((a, b) => a.title.localeCompare(b.title));
+                list.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
             } else if (currentSort === 'za') {
-                list.sort((a, b) => b.title.localeCompare(a.title));
+                list.sort((a, b) => (b.title || '').localeCompare(a.title || ''));
             }
 
-            targetContainer.innerHTML = "";
+            container.innerHTML = "";
             list.forEach(item => {
-                const card = allEl ? createPoemCard(item) : createStandardCard(item);
-                targetContainer.appendChild(card);
+                const card = isPoem ? createPoemCard(item) : createStandardCard(item);
+                container.appendChild(card);
             });
         };
 
@@ -216,36 +230,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         render();
-    }
+    };
 
-    // 7. PASSWORD LOCK LOGIC
-    const correctPassword = "brooklyn"; 
-
-    if (squirrelingGrid && sessionStorage.getItem('squirreling_unlocked') !== 'true') {
-        const userInput = prompt("Enter password to access Squirreling:");
-        if (userInput === correctPassword) {
-            sessionStorage.setItem('squirreling_unlocked', 'true');
-        } else {
-            alert("Incorrect password!");
-            window.location.href = "index.html";
-        }
-    }
-
-    if (squirrelingBtn) {
-        squirrelingBtn.addEventListener('click', function(e) {
-            e.preventDefault(); 
-
-            if (sessionStorage.getItem('squirreling_unlocked') === 'true') {
-                window.location.href = "squirreling.html";
-            } else {
-                const userInput = prompt("Enter password to access Squirreling:");
-                if (userInput === correctPassword) {
-                    sessionStorage.setItem('squirreling_unlocked', 'true');
-                    window.location.href = "squirreling.html";
-                } else if (userInput !== null) {
-                    alert("Incorrect password!");
-                }
-            }
-        });
-    }
+    // Explicitly render each grid independently to ensure none are skipped
+    if (allEl && typeof poems !== 'undefined') renderSection(allEl, poems, true);
+    if (emailGrid && typeof emailsData !== 'undefined') renderSection(emailGrid, emailsData, false);
+    if (squirrelingGrid && typeof squirrelingData !== 'undefined') renderSection(squirrelingGrid, squirrelingData, false);
 });
