@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const poemHero = document.querySelector('.poem-hero-visual');
     const squirrelingBtn = document.getElementById('squirreling-btn');
 
-    // 2. BACKGROUND HERO LOGIC
+    // 2. BACKGROUND HERO LOGIC (FIXED)
     const poemImages = [
         'hero2.jpg', 'hero3.jpg', 'hero4.jpg', 'hero5.jpg', 'hero6.jpg',
         'hero7.jpg', 'hero8.jpg', 'hero9.jpg', 'hero10.jpg', 'hero11.jpg',
@@ -18,11 +18,26 @@ document.addEventListener("DOMContentLoaded", () => {
         'hero17.jpg', 'hero18.jpg', 'hero19.jpg'
     ];
 
+    // Helper to ensure paths resolve reliably relative to root
+    const getImagePath = (fileName) => {
+        // Adjust path format if hosting on subfolders/GitHub Pages
+        return `assets/hero_images/${fileName}`;
+    };
+
     if (mainHero) {
-        mainHero.style.backgroundImage = "url('./assets/hero_images/hero.jpg')";
-    } else if (poemHero) {
+        const imagePath = getImagePath('hero.jpg');
+        mainHero.style.backgroundImage = `url('${imagePath}')`;
+        mainHero.style.backgroundSize = 'cover';
+        mainHero.style.backgroundPosition = 'center';
+    } 
+    
+    // Changed 'else if' to 'if' so poemHero gets updated even if mainHero exists
+    if (poemHero) {
         const randomImg = poemImages[Math.floor(Math.random() * poemImages.length)];
-        poemHero.style.backgroundImage = `url('./assets/hero_images/${randomImg}')`;
+        const imagePath = getImagePath(randomImg);
+        poemHero.style.backgroundImage = `url('${imagePath}')`;
+        poemHero.style.backgroundSize = 'cover';
+        poemHero.style.backgroundPosition = 'center';
     }
 
     // 3. CARD GENERATORS
@@ -161,7 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const render = () => {
             const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
             
-            // SAFE FILTERING (Prevents crash if preview/tags are missing)
             let list = targetData.filter(item => {
                 const titleMatch = item.title && item.title.toLowerCase().includes(query);
                 const tagMatch = item.tags && item.tags.some(t => t.toLowerCase().includes(query));
@@ -207,7 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. PASSWORD LOCK LOGIC
     const correctPassword = "brooklyn"; 
 
-    // Handle Direct Page Loads to squirreling.html
     if (squirrelingGrid && sessionStorage.getItem('squirreling_unlocked') !== 'true') {
         const userInput = prompt("Enter password to access Squirreling:");
         if (userInput === correctPassword) {
@@ -218,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Handle Nav Bar Button Click
     if (squirrelingBtn) {
         squirrelingBtn.addEventListener('click', function(e) {
             e.preventDefault(); 
